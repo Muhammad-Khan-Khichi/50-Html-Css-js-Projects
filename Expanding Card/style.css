@@ -23,14 +23,13 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
-    border-radius: 50px;
+    border-radius: 90px;
     color: #fff ;
     cursor: pointer;
     flex: 0.5;
     margin: 10px;
     position: relative;
     transition: flex 0.4s ease-in;
-
 }
 
 .panel h3{
