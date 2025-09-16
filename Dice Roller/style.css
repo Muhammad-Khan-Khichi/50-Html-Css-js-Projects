@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container{
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dice{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 3px solid #333;
+    border-radius: 15px;
+    margin: 20px auto;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.dice:hover{
+    transform: scale(1.05);
+}
+
+.dice.rolling {
+    animation: roll 0.5s ease-in-out;
+}
+
+@keyframes roll {
+    0%{
+        transform: rotate(0deg) scale(1);
+}
+    25%{
+        transform: rotate(90deg) scale(1.1);
+}
+    50%{
+        transform: rotate(180deg) scale(0.9);
+}
+    75%{
+        transform: rotate(270deg) scale(1.1);
+}
+    100%{
+        transform: rotate(360deg) scale(1);
+}
+}
+
+
+.roll-btn{
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.roll-btn:hover{
+    background-color: #5a6fd8;
+}
+
+.roll-btn:disabled{
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.result{
+    font-size: 24px;
+    color: #667eea;
+    margin-top: 20px;
+    min-height: 30px;
+}
